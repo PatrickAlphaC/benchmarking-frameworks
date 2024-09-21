@@ -1,5 +1,5 @@
 # List of directories to test
-directories := "forge-test mox-test hardhat-test ape-test brownie-test"
+directories := "foundry-test moccasin-test hardhat-test ape-test brownie-test"
 
 # Default recipe to run all tests
 default:
@@ -13,11 +13,11 @@ run-all-tests:
         echo ""; \
     done
 
-forge-test:
+foundry-test:
     #!/usr/bin/env bash
     set -e
     echo "Testing forge:"
-    cd forge-test
+    cd foundry-test
 
     # Define the time_command function within the recipe
     time_command() {
@@ -29,11 +29,11 @@ forge-test:
     time_command "forge test"
     time_command "forge script script/Counter.s.sol"
 
-mox-test:
+moccasin-test:
     #!/usr/bin/env bash
     set -e
     echo "Testing mox:"
-    cd mox-test
+    cd moccasin-test
 
     # Define the time_command function within the recipe
     time_command() {
