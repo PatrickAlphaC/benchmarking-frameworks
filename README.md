@@ -4,8 +4,6 @@ Please see the readme of each respective repo for how benchmarking was conducted
 
 # Results
 
-Certainly! Here's the data formatted in a markdown chart:
-
 | Framework | Init  | Help   | Compile | Test   | Deploy | Total   |
 | --------- | ----- | ------ | ------- | ------ | ------ | ------- |
 | mox       | 0.04s | 0.049s | 0.641s  | 0.625s | 0.549s | 1.904s  |
