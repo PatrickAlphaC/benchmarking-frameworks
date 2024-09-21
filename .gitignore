@@ -1,0 +1,12 @@
+.pytest_cache/
+__pycache__/
+*.pyc
+out/
+node_modules/
+artifacts/
+cache/
+build/
+.build/
+.github/
+scrap/
+.DS_Store

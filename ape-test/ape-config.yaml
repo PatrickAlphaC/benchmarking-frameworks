@@ -1,0 +1,7 @@
+name: mytoken
+plugins:
+  - name: vyper
+
+# if you installed hardhat for the first time
+# cd into your mytoken 
+# npm install --save-dev hardhat
