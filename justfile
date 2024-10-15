@@ -120,3 +120,17 @@ snekmate-moccasin-test:
         { time bash -c "$@"; } 2>&1 | grep real | awk '{print $2}'
     }
     time_command "mox build"
+
+snekmate-ape-test:
+    #!/usr/bin/env bash
+    set -e
+    echo "Testing ape with snekmate:"
+    cd snekmate-ape-test
+    uv tool uninstall eth-ape
+    uv tool install eth-ape --with snekmate --with ape-vyper
+
+    # Define the time_command function within the recipe
+    time_command() {
+        { time bash -c "$@"; } 2>&1 | grep real | awk '{print $2}'
+    }
+    time_command "ape compile"

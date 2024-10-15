@@ -20,6 +20,7 @@ Note: For the frameworks with missing values (hardhat and ape), the total is cal
 | --------- | ------- |
 | mox       | 6.339s  |
 | forge     | 10.496s |
+| ape       | 16.272s |
 
 ## Setup
 

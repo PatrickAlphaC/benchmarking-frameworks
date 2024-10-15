@@ -1,0 +1,13 @@
+name: mytoken
+plugins:
+  - name: vyper
+dependencies:
+   - python: snekmate
+     config_override:
+       base_path: src
+       contracts_folder: snekmate
+
+
+# if you installed hardhat for the first time
+# cd into your mytoken 
+# npm install --save-dev hardhat
