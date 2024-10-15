@@ -1,5 +1,5 @@
 # List of directories to test
-directories := "foundry-test moccasin-test hardhat-test ape-test brownie-test"
+directories := "foundry-test moccasin-test hardhat-test ape-test brownie-test snekmate-foundry-test snekmate-moccasin-test"
 
 # Default recipe to run all tests
 default:
@@ -91,3 +91,32 @@ brownie-test:
     time_command "brownie compile"
     time_command "brownie test"
     time_command "brownie run deploy"
+
+snekmate-foundry-test:
+    #!/usr/bin/env bash
+    set -e
+    echo "Testing foundry with snekmate:"
+    cd snekmate-foundry-test
+    foundryup
+    rm -rf cache
+    rm -rf out
+
+    # Define the time_command function within the recipe
+    time_command() {
+        { time bash -c "$@"; } 2>&1 | grep real | awk '{print $2}'
+    }
+    time_command "forge build"
+
+snekmate-moccasin-test:
+    #!/usr/bin/env bash
+    set -e
+    echo "Testing moccasin with snekmate:"
+    cd snekmate-moccasin-test
+    uv tool uninstall moccasin
+    uv tool install moccasin
+
+    # Define the time_command function within the recipe
+    time_command() {
+        { time bash -c "$@"; } 2>&1 | grep real | awk '{print $2}'
+    }
+    time_command "mox build"

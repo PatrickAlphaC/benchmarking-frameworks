@@ -1,0 +1,23 @@
+# Run forge build for each file in the src/snek-mocks folder
+build-mocks:
+    #!/usr/bin/env bash
+    folder="src/snek-mocks"
+    if [ ! -d "$folder" ]; then
+        echo "Error: Folder $folder does not exist."
+        exit 1
+    fi
+
+    for file in "$folder"/*; do
+        if [ -f "$file" ]; then
+            echo "Running forge build for: $file"
+            forge build "$file"
+            echo "------------------------"
+        fi
+    done
+
+    echo "Process completed."
+
+# Show usage information
+default:
+    @echo "Usage: just build-mocks"
+    @echo "This will run 'forge build' on each file in the src/snek-mocks folder."

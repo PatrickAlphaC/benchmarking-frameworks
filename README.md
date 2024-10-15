@@ -6,13 +6,20 @@ Please see the readme of each respective repo for how benchmarking was conducted
 
 | Framework | Init  | Help   | Compile | Test   | Deploy | Total   |
 | --------- | ----- | ------ | ------- | ------ | ------ | ------- |
-| mox       | 0.04s | 0.049s | 0.641s  | 0.625s | 0.549s | 1.904s  |
+| mox       | 0.04s | 0.049s | 0.587s  | 0.625s | 0.549s | 1.850s  |
 | hardhat   | -     | 0.391s | 0.398s  | 0.701s | 0.670s | 2.160s  |
 | brownie   | 0.42s | 0.433s | 0.393s  | 3.229s | 3.045s | 7.520s  |
 | ape       | 5.08s | 2.482s | 1.319s  | -      | 1.515s | 10.396s |
 | forge     | 0.20s | 0.013s | 0.112s  | 0.350s | 0.292s | 0.967s  |
 
 Note: For the frameworks with missing values (hardhat and ape), the total is calculated using the available data, treating the missing values as 0.
+
+# Snekmate 35 Vyper Files Cold Compile Results
+
+| Framework | Compile |
+| --------- | ------- |
+| mox       | 6.339s  |
+| forge     | 10.496s |
 
 ## Setup
 
@@ -23,9 +30,24 @@ All tests were conducted with the following OS/techniques.
 - 128 GB
 - command: `time` using the `total` output
 
+## Requirements
+
+You need a lot of stuff installed to run the benchmarks, including:
+
+- yarn
+- just
+- foundry
+- moccasin
+- ape
+- brownie
+- uv
+- bash
+
+I'm not going to list install instructions for them all. 
+
 ## Running benchmarks
 
-To run all benchmarks, you'll need [just](https://github.com/casey/just) installed, then run:
+Run:
 
 ```bash
 just
@@ -35,11 +57,11 @@ The `init` command was tested separately, because it was a pain to get the `just
 
 # Versions
 
-- Moccasin (0.2.3) @ `44686b0`
+- Moccasin (0.3.0)
 - Hardhat (2.22.11)
 - Brownie (1.20.6)
 - Ape (0.8.14)
-- Foundry (0.2.0) @ `a33fc1d`
+- Foundry (0.2.0) @ `fdd321b`
 
 # Fairness
 
