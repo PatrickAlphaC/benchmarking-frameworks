@@ -1,0 +1,3 @@
+[submodule "snekmate-foundry-test/lib/forge-std"]
+	path = snekmate-foundry-test/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
