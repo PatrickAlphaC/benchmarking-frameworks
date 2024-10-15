@@ -66,4 +66,4 @@ The `init` command was tested separately, because it was a pain to get the `just
 
 # Fairness
 
-Is this fair? Not really. Each framework has tradeoffs. So a blanket look like this looking at the warm cache isn't great. 
+Is this fair? Not really. Each framework has tradeoffs, and any attempt to measure will result in some form of cherry-picking, so it'll never be 100% fair. But at the same time, experiments like this are the best way for us to reason about the world. So, understand each data piece has caveats, but use it to help fuel your decisions!  
