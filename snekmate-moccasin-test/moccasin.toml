@@ -2,7 +2,9 @@
 src = "src"
 out = "out"
 dot_env = ".env"
-dependencies = ["snekmate"]
+dependencies = [
+    "snekmate",
+]
 
 [networks.pyevm]
 is_zksync = false

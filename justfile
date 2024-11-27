@@ -127,7 +127,7 @@ snekmate-ape-test:
     echo "Testing ape with snekmate:"
     cd snekmate-ape-test
     uv tool uninstall eth-ape
-    uv tool install eth-ape --with snekmate --with ape-vyper
+    uv tool install eth-ape --with snekmate --with ape-vyper --python 3.12
 
     # Define the time_command function within the recipe
     time_command() {

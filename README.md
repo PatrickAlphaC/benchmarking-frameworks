@@ -4,13 +4,13 @@ Please see the readme of each respective repo for how benchmarking was conducted
 
 # Results
 
-| Framework | Init  | Help   | Compile | Test   | Deploy | Total   |
-| --------- | ----- | ------ | ------- | ------ | ------ | ------- |
-| mox       | 0.04s | 0.049s | 0.587s  | 0.625s | 0.549s | 1.850s  |
-| hardhat   | -     | 0.391s | 0.398s  | 0.701s | 0.670s | 2.160s  |
-| brownie   | 0.42s | 0.433s | 0.393s  | 3.229s | 3.045s | 7.520s  |
-| ape       | 5.08s | 2.482s | 1.319s  | -      | 1.515s | 10.396s |
-| forge     | 0.20s | 0.013s | 0.112s  | 0.350s | 0.292s | 0.967s  |
+| Framework | Init  | Help   | Compile | Test   | Deploy | Total      |
+| --------- | ----- | ------ | ------- | ------ | ------ | ---------- |
+| mox       | 0.04s | 0.049s | 0.587s  | 0.625s | 0.549s | 1.850s     |
+| hardhat   | -     | 0.391s | 0.398s  | 0.701s | 0.670s | 2.160s + X |
+| brownie   | 0.42s | 0.433s | 0.393s  | 3.229s | 3.045s | 7.520s     |
+| ape       | 0.11s | 0.266s | 1.319s  | -      | 1.306s | 3.001s + X |
+| forge     | 0.20s | 0.013s | 0.112s  | 0.350s | 0.292s | 0.967s     |
 
 Note: For the frameworks with missing values (hardhat and ape), the total is calculated using the available data, treating the missing values as 0.
 
@@ -18,9 +18,9 @@ Note: For the frameworks with missing values (hardhat and ape), the total is cal
 
 | Framework | Compile |
 | --------- | ------- |
-| mox       | 6.339s  |
-| forge     | 10.496s |
-| ape       | 16.272s |
+| mox       | 5.859s  |
+| forge     | 8.903s  |
+| ape       | 7.250s  |
 
 ## Setup
 
